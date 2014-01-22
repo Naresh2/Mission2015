@@ -49,7 +49,7 @@ namespace Twilio.Controllers
             var doc = new XDocument();
 
             var response = new XElement("Response");
-            var gather = new XElement("Say", "Thank you for your support.");
+            var gather = new XElement("Say", string.Format("We are sorry. The policy number {0} is not found ", Digits));
             response.Add(gather);
             doc.Add(response);
 
